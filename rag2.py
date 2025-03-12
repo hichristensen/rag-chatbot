@@ -9,9 +9,7 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain_community.vectorstores import Chroma
 import panel as pn
 
-os.environ["OPENAI_API_KEY"] = (
-    "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"
-)
+os.environ["OPENAI_API_KEY"] = ()
 # load documents
 loader = PyPDFLoader("example.pdf")
 documents = loader.load()
