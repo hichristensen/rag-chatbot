@@ -40,4 +40,3 @@ def create_rag_chain(chunks):
     )
 
     return rag_chain
-

@@ -42,5 +42,3 @@ def process_document(source):
        return process_image(source)
    else:
        raise ValueError(f"Unsupported file type: {source}")
-
-

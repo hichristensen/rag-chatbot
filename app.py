@@ -52,13 +52,13 @@ if uploaded_file is not None:
 query = st.text_input("Ask a question about the uploaded document")
 
 
-    if st.session_state.rag_chain and query:
-        with st.spinner("Generating answer..."):
-            result = st.session_state.rag_chain.invoke(query)
+if st.session_state.rag_chain and query:
+    with st.spinner("Generating answer..."):
+        result = st.session_state.rag_chain.invoke(query)
 
-            st.subheader("Answer:")
-            st.write(result)
-    elif not st.session_state.rag_chain:
-        st.error("Please upload and process a file first.")
-    else:
-        st.error("Please enter a question.")
+    st.subheader("Answer:")
+    st.write(result)
+elif not st.session_state.rag_chain:
+    st.error("Please upload and process a file first.")
+else:
+    st.error("Please enter a question.")
